@@ -1,0 +1,132 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/refs/heads/master/schema.json",
+  "basics": {
+    "name": "Jimmy VUIDART",
+    "label": "Expert Frontend",
+    "email": "jimmyvuidart@gmail.com",
+    "phone": "+33 6 24 57 77 03",
+    "image": "https://cdn.libravatar.org/avatar/4d6d69a5e0c76844e6d0298a4fc288c6?s=1000",
+    "location": {
+      "city": "",
+      "countryCode": "FR"
+    },
+    "summary": "Créateur d'application web et mobile depuis 10 ans. Centré sur le besoin client. Habitué des méthodes Agile et du travail d'équipe. Sensible à la qualité et aux tests. Full-stack, spécialisé frontend. Certifié expert Angular. Et même, parfois, avec un trait d'humour.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jimmy-vuidart",
+        "username": "jimmy-vuidart"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Foyer Assurances",
+      "location": "Luxembourg",
+      "position": "Lead Angular - Développeur Scala (consultant Sfeir)",
+      "startDate": "2019-01",
+      "description": "",
+      "highlights": [
+        "Parcours de souscription à un produit d'assurance",
+        "Outil de gestion client"
+      ],
+      "keywords": ["Angular", "Scala", "Play", "Kafka", "MongoDB"]
+    },
+    {
+      "name": "Societe Générale",
+      "position": "Développeur full-stack (consultant Sfeir)",
+      "startDate": "2015-09",
+      "endDate": "2019-01",
+      "highlights": [
+        "Architecture d'une application de tarification et d'achat en temps réel de produits financier",
+        "Application de gestion d'un catalogue de produit (Java)",
+        "Application de génération et stockage de documents réglementaires (Angular)"
+      ],
+      "keywords": ["Angular", "Java", "Spring", "PostgreSQL", "ng-packagr"]
+    },
+    {
+      "name": "Sfeir",
+      "position": "Consultant",
+      "startDate": "2015-09"
+    },
+    {
+      "name": "Sfeir",
+      "position": "Stagiaire",
+      "startDate": "2015-04",
+      "endDate": "2015-09",
+      "highlights": [
+        "Outil de candidature interne"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified Senior Angular Developer",
+      "date": "2024-05-22",
+      "issuer": "certificates.dev",
+      "url": "https://certificates.dev/c/8fc2db75-6098-43d9-9516-f86b10db29b4"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université de Lorraine",
+      "studyType": "",
+      "area": "Master MIAGE",
+      "startDate": "2012",
+      "endDate": "2015",
+      "url": "https://www.miage.fr/"
+    },
+    {
+      "institution": "Université de Lorraine",
+      "studyType": "",
+      "area": "DUT Informatique",
+      "startDate": "2010",
+      "endDate": "2012"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Fody Journey",
+      "description": "Jeu arcade qui met au défi votre réactivité, votre dexterité et votre esprit compétitif aux commandes d'un mignon petit poisson volant !",
+      "url": "https://gamejolt.com/games/fody-journey/236381",
+      "keywords": ["Unity3D", "iOS", "Android"]
+    },
+    {
+      "name": "Global Game Jam",
+      "description": "Multiple participations aux Global Game JAMs",
+      "url": "https://v3.globalgamejam.org/users/tidiusff",
+      "keywords": ["Unity3D"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "level": "Expert",
+      "keywords": ["Angular", "Typescript", "JavaScript", "React", "VueJS", "Next.js", "HTML / CSS", "Tailwind"]
+    },
+    {
+      "name": "Backend",
+      "level": "Expert",
+      "keywords": ["NodeJS", "ExpressJS", "NestJS", "Java", "Spring", "Scala", "Play"]
+    },
+    {
+      "name": "Mobile",
+      "level": "Intermediaire",
+      "keywords": ["React Native", "Expo", "Android Studio", "Unity3D"]
+    },
+    {
+      "name": "Database",
+      "keywords": ["PostgreSQL", "MongoDB", "SQL", "NoSQL"]
+    },
+    {
+      "name": "IA",
+      "level": "Intermediaire",
+      "keywords": ["ChatGPT", "Claude", "Microsoft Copilot", "Github Copilot"]
+    },
+    {
+      "name": "Moteurs de jeu",
+      "level": "Avancé",
+      "keywords": ["Unity", "Godot"]
+    }
+  ]
+}
