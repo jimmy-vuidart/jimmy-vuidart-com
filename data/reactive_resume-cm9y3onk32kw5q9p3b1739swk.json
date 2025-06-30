@@ -1,0 +1,529 @@
+{
+  "basics": {
+    "name": "Jimmy VUIDART",
+    "headline": "Senior Frontend Engineer",
+    "email": "jimmyvuidart@gmail.com",
+    "phone": "+33 6 24 57 77 03",
+    "location": "Audun-le-Tiche, France",
+    "url": {
+      "label": "",
+      "href": ""
+    },
+    "customFields": [],
+    "picture": {
+      "url": "https://media.licdn.com/dms/image/v2/C4E03AQHb3WtLniJL8g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517020091438?e=1750291200&v=beta&t=khO12NXPlaQ0Mc-OkNcebbaQCOJ7vLMKUhRh8KE7Wj4",
+      "size": 64,
+      "aspectRatio": 1,
+      "borderRadius": 0,
+      "effects": {
+        "hidden": false,
+        "border": false,
+        "grayscale": false
+      }
+    }
+  },
+  "sections": {
+    "summary": {
+      "name": "Summary",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "summary",
+      "content": "<p></p>"
+    },
+    "awards": {
+      "name": "Awards",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "awards",
+      "items": [
+        {
+          "id": "k7vac8pzo5yrtkqykea8ohvi",
+          "visible": true,
+          "title": "Sfeir Innovation Challenge 2017",
+          "awarder": "",
+          "date": "",
+          "summary": "",
+          "url": {
+            "label": "Gamificator",
+            "href": "https://github.com/jimmy-vuidart/gamificator"
+          }
+        },
+        {
+          "id": "hrautrwz8znuf1v931i4hqvl",
+          "visible": true,
+          "title": "Sfeir Innovation Challenge 2018",
+          "awarder": "",
+          "date": "",
+          "summary": "",
+          "url": {
+            "label": "taggy",
+            "href": "https://github.com/Seabirds-Games/taggy"
+          }
+        },
+        {
+          "id": "do5mv4wmggjce9boxmys2w0w",
+          "visible": true,
+          "title": "Sfeir Innovation Challenge 2020",
+          "awarder": "",
+          "date": "",
+          "summary": "",
+          "url": {
+            "label": "virtual-classroom",
+            "href": "https://github.com/jimmy-vuidart/virtual-classroom"
+          }
+        }
+      ]
+    },
+    "certifications": {
+      "name": "Certifications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "certifications",
+      "items": [
+        {
+          "id": "n8j4b0gexywpaolot4cd37kx",
+          "visible": true,
+          "name": "Certified Senior Angular Developer",
+          "issuer": "",
+          "date": "",
+          "summary": "<p></p>",
+          "url": {
+            "label": "certificates.dev",
+            "href": "https://certificates.dev/c/8fc2db75-6098-43d9-9516-f86b10db29b4"
+          }
+        }
+      ]
+    },
+    "education": {
+      "name": "Education",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "education",
+      "items": [
+        {
+          "id": "ktsizy77kb50jzbti48nyoso",
+          "visible": true,
+          "institution": "Université de Lorraine",
+          "studyType": "",
+          "area": "Master MIAGE",
+          "score": "",
+          "date": "2012 - 2015",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "ckm48bjklko4n1hr6evvz9bz",
+          "visible": true,
+          "institution": "Université de Lorraine",
+          "studyType": "",
+          "area": "DUT Informatique",
+          "score": "",
+          "date": "2010 - 2012",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "name": "Professional Experiences",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "experience",
+      "items": [
+        {
+          "id": "v7yy369wqa4t0awfpfftw55z",
+          "visible": true,
+          "company": "Foyer Assurances - Full-stack Developer",
+          "position": "",
+          "location": "",
+          "date": "2019-01 - Today",
+          "summary": "<p><u>Customer subscription journey to life insurance</u></p><ul><li><p>Implementation of forms & complex business rules following the design of the UX team</p></li><li><p>Setting up the workflow for subscription registration</p></li><li><p>Angular 15 | Scala Play2+Internal Framework | MongoDB</p></li></ul><p><u>Development and use of cross-cutting components via a monorepo</u></p><p><u>Customer management tool</u></p><ul><li><p>Integration of the UX team's design and new features</p></li><li><p>Angular 6+ | Scala Play 2+Internal Framework | MongoDB</p></li></ul><p></p>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "c9zbwnpuyenvl5gnpmwihsd1",
+          "visible": true,
+          "company": "Societe Générale - Full-stack Developer",
+          "position": "",
+          "location": "",
+          "date": "2015-09 - 2019-01",
+          "summary": "<p><u>Application for placing orders for financial products</u></p><ul><li><p>Design of the platform from scratch</p></li><li><p>Real-time quotation of products</p></li><li><p>Implementation of a distributed component architecture</p><ul><li><p>1 component = 1 product = 1 Git project</p></li><li><p>Final platform</p></li></ul></li><li><p>Angular | Java+Spring | Oracle</p></li></ul><p><u>Tool for generating and saving legal documents (KIDs) for public platform exposure</u></p><ul><li><p>Creation and development of the platform from scratch</p></li><li><p>Angular | Java+Spring | Oracle</p></li></ul><p><u>Catalog of structured financial products for private banking</u></p><ul><li><p>Implementation of new features</p></li><li><p>Java - Oracle</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "byqqgf45896142eafmcnv9ml",
+          "visible": true,
+          "company": "Sfeir",
+          "position": "",
+          "location": "",
+          "date": "2014-04 - Today",
+          "summary": "<p></p>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "volunteer": {
+      "name": "Volunteering",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "volunteer",
+      "items": []
+    },
+    "interests": {
+      "name": "Interests",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "interests",
+      "items": [
+        {
+          "id": "v9mo5nm6z9wpr3ql1zrvox2c",
+          "visible": true,
+          "name": "Gaming",
+          "keywords": [
+            "Management",
+            "Automation",
+            "Online Gaming"
+          ]
+        },
+        {
+          "id": "mf38u9di8ss987uwtxyepsh1",
+          "visible": true,
+          "name": "Formula 1",
+          "keywords": []
+        },
+        {
+          "id": "ucbjn5yhr979xymw369nt9ng",
+          "visible": true,
+          "name": "Game Development",
+          "keywords": []
+        }
+      ]
+    },
+    "languages": {
+      "name": "Languages",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "languages",
+      "items": [
+        {
+          "id": "leh0o0hmmml4848t7f270fj5",
+          "visible": true,
+          "name": "French",
+          "description": "Native language",
+          "level": 5
+        },
+        {
+          "id": "o5wnskizk2nrlbr7to7apf2t",
+          "visible": true,
+          "name": "English",
+          "description": "",
+          "level": 5
+        }
+      ]
+    },
+    "profiles": {
+      "name": "Profiles",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "profiles",
+      "items": [
+        {
+          "id": "lee66hp923jwbdvfuop1bmpj",
+          "visible": true,
+          "network": "LinkedIn",
+          "username": "jimmy-vuidart",
+          "icon": "linkedin",
+          "url": {
+            "label": "",
+            "href": "https://www.linkedin.com/in/jimmy-vuidart"
+          }
+        },
+        {
+          "id": "ryuk8bquth48ne1qq4qf1t2u",
+          "visible": true,
+          "network": "GitHub",
+          "username": "jimmy-vuidart",
+          "icon": "github",
+          "url": {
+            "label": "",
+            "href": "https://github.com/jimmy-vuidart"
+          }
+        }
+      ]
+    },
+    "projects": {
+      "name": "Personal Projects",
+      "columns": 2,
+      "separateLinks": true,
+      "visible": true,
+      "id": "projects",
+      "items": [
+        {
+          "id": "ib89syl6v2dt07oc6l0ex93l",
+          "visible": true,
+          "name": "Fody's Journey",
+          "description": "",
+          "date": "",
+          "summary": "<p>\"Fly or dive with Fody, a fearless little fish exploring the endless oceans!\"</p><ul><li><p>Arcade</p></li><li><p>Unity3D</p></li></ul>",
+          "keywords": [],
+          "url": {
+            "label": "gamejolt",
+            "href": "https://gamejolt.com/games/fody-journey/236381"
+          }
+        },
+        {
+          "id": "vbh27a76t7k8zkpncgcgpqeb",
+          "visible": true,
+          "name": "Kama-Bot",
+          "description": "",
+          "date": "",
+          "summary": "<p>Online game team management tool in the form of a web app and a Discord bot</p><ul><li><p>Team calendar / Consumables managment / Loot distribution calculator</p></li><li><p>Angular | NestJS | NodeJS+Discord.JS | Firebase</p></li><li><p>Also has a legacy version in Java+Spring<br></p></li></ul>",
+          "keywords": [],
+          "url": {
+            "label": "GitHub",
+            "href": "https://github.com/jimmy-vuidart/kama-bot"
+          }
+        }
+      ]
+    },
+    "publications": {
+      "name": "Publications",
+      "columns": 2,
+      "separateLinks": true,
+      "visible": true,
+      "id": "publications",
+      "items": [
+        {
+          "id": "gyqc809evip16kqmn2psdwwj",
+          "visible": true,
+          "name": "Introduction to Voice Assistant Development (FR)",
+          "publisher": "",
+          "date": "",
+          "summary": "<ul><li><p>Amazon Alexa</p></li><li><p>Google Assistant</p></li></ul>",
+          "url": {
+            "label": "YouTube Presentation",
+            "href": "https://www.youtube.com/watch?v=DF5pJQrwIw0&ab_channel=SFEIRTV"
+          }
+        },
+        {
+          "id": "eaj48emo7hhyaed21lmefcml",
+          "visible": true,
+          "name": "Creating a VR Classroom with Unity (FR)",
+          "publisher": "",
+          "date": "",
+          "summary": "<ul><li><p>Introduction to the concept of a graphics engine</p></li><li><p>Live-coding</p></li></ul>",
+          "url": {
+            "label": "YouTube Presentation",
+            "href": "https://www.youtube.com/watch?v=cc3fmsrkFLU"
+          }
+        }
+      ]
+    },
+    "references": {
+      "name": "References",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "references",
+      "items": []
+    },
+    "skills": {
+      "name": "Skills",
+      "columns": 4,
+      "separateLinks": true,
+      "visible": true,
+      "id": "skills",
+      "items": [
+        {
+          "id": "m5i9hfgzzukxao9n5w2kisvz",
+          "visible": true,
+          "name": "Angular",
+          "description": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "ye6au03dko8ftiofl3c46r3e",
+          "visible": true,
+          "name": "React",
+          "description": "",
+          "level": 2,
+          "keywords": [
+            "Expo",
+            "Next.js"
+          ]
+        },
+        {
+          "id": "fbz0z8m69i6hymav2wqc0t75",
+          "visible": true,
+          "name": "NodeJS",
+          "description": "",
+          "level": 5,
+          "keywords": [
+            "ExpressJS",
+            "NestJS"
+          ]
+        },
+        {
+          "id": "da2ygszualg8dgucv7lwqh2z",
+          "visible": true,
+          "name": "Java",
+          "description": "",
+          "level": 4,
+          "keywords": [
+            "Spring"
+          ]
+        },
+        {
+          "id": "p6eqxo8qxdqiw11rjavcwutm",
+          "visible": true,
+          "name": "Scala",
+          "description": "",
+          "level": 3,
+          "keywords": [
+            "Play"
+          ]
+        },
+        {
+          "id": "l4zpb1y9ve5m0qpv9raqxq0l",
+          "visible": true,
+          "name": "SQL",
+          "description": "",
+          "level": 4,
+          "keywords": [
+            "Oracle",
+            "PostgreSQL"
+          ]
+        },
+        {
+          "id": "eaz7w0zudpckiir1pmjhk9xc",
+          "visible": true,
+          "name": "AI",
+          "description": "",
+          "level": 2,
+          "keywords": [
+            "ChatGPT",
+            "Microsoft Copilot",
+            "Mistral LeChat"
+          ]
+        },
+        {
+          "id": "ro24t6c32oj3cpjjmv2gbgx5",
+          "visible": true,
+          "name": "Graphics Engines",
+          "description": "",
+          "level": 4,
+          "keywords": [
+            "Unity",
+            "Godot"
+          ]
+        },
+        {
+          "id": "f47yheiwd3f7meh1t6bli4x2",
+          "visible": true,
+          "name": "NoSQL",
+          "description": "",
+          "level": 4,
+          "keywords": [
+            "Firebase",
+            "MongoDB",
+            "Suprabase"
+          ]
+        },
+        {
+          "id": "fypsxwrf69um5kqj3rg8m52e",
+          "visible": true,
+          "name": "C# / .NET",
+          "description": "",
+          "level": 3,
+          "keywords": []
+        }
+      ]
+    },
+    "custom": {}
+  },
+  "metadata": {
+    "template": "gengar",
+    "layout": [
+      [
+        [
+          "experience",
+          "skills",
+          "volunteer",
+          "references"
+        ],
+        [
+          "summary",
+          "languages",
+          "profiles",
+          "certifications",
+          "awards",
+          "education",
+          "interests"
+        ]
+      ],
+      [
+        [
+          "projects",
+          "publications"
+        ],
+        []
+      ]
+    ],
+    "css": {
+      "value": "",
+      "visible": true
+    },
+    "page": {
+      "margin": 18,
+      "format": "a4",
+      "options": {
+        "breakLine": true,
+        "pageNumbers": true
+      }
+    },
+    "theme": {
+      "background": "#ffffff",
+      "text": "#000000",
+      "primary": "#0284c7"
+    },
+    "typography": {
+      "font": {
+        "family": "Lato",
+        "subset": "latin",
+        "variants": [
+          "regular"
+        ],
+        "size": 14
+      },
+      "lineHeight": 1.5,
+      "hideIcons": false,
+      "underlineLinks": true
+    },
+    "notes": ""
+  }
+}

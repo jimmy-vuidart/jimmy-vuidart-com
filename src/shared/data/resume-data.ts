@@ -1,5 +1,6 @@
 // src/data/resume-data.ts
 // Centralized resume data for use across the application
+import resumeJson from '../../../data/reactive_resume-cm9y3onk32kw5q9p3b1739swk.json';
 
 // Define types for resume data
 export interface WorkExperience {
@@ -8,6 +9,7 @@ export interface WorkExperience {
   period: string;
   description: string;
   achievements: string[];
+  skills: string[];
 }
 
 export interface Education {
@@ -28,92 +30,99 @@ export interface Certification {
   date: string;
 }
 
-// Resume data
+// Helper function to extract achievements from HTML summary
+function extractAchievementsFromHtml(html: string): string[] {
+  // Simple extraction of list items from HTML
+  const achievements: string[] = [];
+  const liMatches = html.match(/<li><p>(.*?)<\/p><\/li>/g);
+
+  if (liMatches) {
+    liMatches.forEach(match => {
+      const content = match.replace(/<li><p>/, '').replace(/<\/p><\/li>/, '');
+      achievements.push(content);
+    });
+  }
+
+  return achievements;
+}
+
+// Helper function to extract skills from HTML summary
+function extractSkillsFromHtml(html: string): string[] {
+  const skills: string[] = [];
+
+  // Look for technology stacks in the format "Technology1 | Technology2 | Technology3"
+  const techStackMatches = html.match(/([A-Za-z0-9+#]+(\s[A-Za-z0-9+#]+)*(\s\d+)?(\+[A-Za-z0-9]+)?)(\s\|\s[A-Za-z0-9+#]+(\s[A-Za-z0-9+#]+)*(\s\d+)?(\+[A-Za-z0-9]+)?)+/g);
+
+  if (techStackMatches) {
+    techStackMatches.forEach(match => {
+      // Split by pipe and trim whitespace
+      const techItems = match.split('|').map(item => item.trim());
+      skills.push(...techItems);
+    });
+  }
+
+  return [...new Set(skills)]; // Remove duplicates
+}
+
+// Transform JSON data to match our expected structure
 export const resumeData = {
-  name: "Jimmy VUIDART",
-  title: "Web Developer & Designer",
-  professionalSummary: "Experienced web developer and designer with a passion for creating modern, responsive, and user-friendly digital experiences. Skilled in front-end and back-end technologies with a strong focus on delivering high-quality solutions that meet business objectives.",
-  
-  workExperience: [
-    {
-      title: "Senior Web Developer",
-      company: "Digital Solutions Inc.",
-      period: "2020 - Present",
-      description: "Lead developer for enterprise web applications, managing a team of 5 developers. Implemented modern front-end architecture using React and TypeScript, resulting in a 40% improvement in application performance.",
-      achievements: [
-        "Redesigned the company's flagship product, improving user engagement by 35%",
-        "Implemented CI/CD pipelines, reducing deployment time by 60%",
-        "Mentored junior developers, improving team productivity by 25%"
-      ]
-    },
-    {
-      title: "Web Developer",
-      company: "Creative Web Agency",
-      period: "2017 - 2020",
-      description: "Developed responsive websites and web applications for various clients across different industries. Worked with a team of designers and developers to deliver high-quality solutions on time and within budget.",
-      achievements: [
-        "Developed over 30 client websites using modern web technologies",
-        "Implemented SEO best practices, improving client search rankings by an average of 40%",
-        "Created a reusable component library that reduced development time by 30%"
-      ]
-    },
-    {
-      title: "Junior Developer",
-      company: "Tech Startups Ltd.",
-      period: "2015 - 2017",
-      description: "Assisted in the development of web applications and websites for early-stage startups. Collaborated with cross-functional teams to implement features and fix bugs.",
-      achievements: [
-        "Contributed to 5 successful product launches",
-        "Developed and maintained documentation for internal tools",
-        "Implemented responsive designs that improved mobile user experience"
-      ]
-    }
-  ],
-  
-  education: [
-    {
-      degree: "Master of Science in Computer Science",
-      institution: "Tech University",
-      period: "2013 - 2015",
-      description: "Specialized in Web Technologies and Human-Computer Interaction. Graduated with honors."
-    },
-    {
-      degree: "Bachelor of Science in Information Technology",
-      institution: "State University",
-      period: "2009 - 2013",
-      description: "Focused on Software Development and Database Management. Participated in various hackathons and coding competitions."
-    }
-  ],
-  
+  name: resumeJson.basics.name,
+  title: resumeJson.basics.headline,
+  professionalSummary: "Senior Frontend Engineer with extensive experience in Angular, React, and Node.js. Passionate about creating modern, responsive, and user-friendly web applications.",
+
+  workExperience: resumeJson.sections.experience.items.map(job => ({
+    title: job.position || job.company.split(' - ')[1] || '',
+    company: job.company.split(' - ')[0] || job.company,
+    period: job.date,
+    description: job.summary ? job.summary.replace(/<\/?[^>]+(>|$)/g, "").split('<ul>')[0] : '',
+    achievements: extractAchievementsFromHtml(job.summary || ''),
+    skills: extractSkillsFromHtml(job.summary || '')
+  })),
+
+  education: resumeJson.sections.education.items.map(edu => ({
+    degree: edu.area,
+    institution: edu.institution,
+    period: edu.date,
+    description: edu.summary || `${edu.area} at ${edu.institution}`
+  })),
+
+  // Group skills by level
   skills: [
-    { category: "Programming Languages", items: ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "PHP"] },
-    { category: "Frameworks & Libraries", items: ["React", "Vue.js", "Angular", "Node.js", "Express", "Astro", "Next.js"] },
-    { category: "Tools & Technologies", items: ["Git", "Docker", "AWS", "Firebase", "GraphQL", "REST APIs", "Webpack", "Vite"] },
-    { category: "Design & UI/UX", items: ["Figma", "Adobe XD", "Tailwind CSS", "SASS/SCSS", "Responsive Design", "Accessibility Standards"] }
-  ],
-  
-  certifications: [
-    {
-      title: "AWS Certified Developer - Associate",
-      issuer: "Amazon Web Services",
-      date: "2022"
+    { 
+      category: "Expert", 
+      items: resumeJson.sections.skills.items
+        .filter(skill => skill.level >= 5)
+        .map(skill => skill.name)
     },
-    {
-      title: "Professional Web Developer Certification",
-      issuer: "Web Development Institute",
-      date: "2020"
+    { 
+      category: "Advanced", 
+      items: resumeJson.sections.skills.items
+        .filter(skill => skill.level >= 3 && skill.level < 5)
+        .map(skill => skill.name)
     },
-    {
-      title: "Google UX Design Professional Certificate",
-      issuer: "Google",
-      date: "2019"
+    { 
+      category: "Intermediate", 
+      items: resumeJson.sections.skills.items
+        .filter(skill => skill.level < 3)
+        .map(skill => skill.name)
+    },
+    { 
+      category: "Languages", 
+      items: resumeJson.sections.languages.items
+        .map(lang => `${lang.name}${lang.description ? ` (${lang.description})` : ''}`)
     }
   ],
 
+  certifications: resumeJson.sections.certifications.items.map(cert => ({
+    title: cert.name,
+    issuer: cert.issuer || '',
+    date: cert.date || ''
+  })),
+
   contact: {
-    email: "contact@JimmyVUIDART.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA"
+    email: resumeJson.basics.email,
+    phone: resumeJson.basics.phone,
+    location: resumeJson.basics.location
   }
 };
 

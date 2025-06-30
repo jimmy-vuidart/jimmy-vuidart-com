@@ -5,6 +5,7 @@ export interface Job {
   period: string;
   description: string;
   achievements: string[];
+  skills: string[];
 }
 
 export interface Props {
@@ -39,6 +40,15 @@ const {
             ))}
           </ul>
         </div>
+        {job.skills && job.skills.length > 0 && (
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <div class="flex flex-wrap gap-2">
+              {job.skills.map((skill) => (
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">{skill}</span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     ))}
   </div>
