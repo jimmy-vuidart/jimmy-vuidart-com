@@ -1,10 +1,11 @@
 {
-  "name": "Jimmy-VUIDART-com",
+  "name": "jimmy-vuidart-com",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build-ghpages": "astro build --base jimmy-vuidart-com",
     "preview": "astro preview",
     "astro": "astro"
   },

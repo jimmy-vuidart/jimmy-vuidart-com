@@ -9,7 +9,7 @@ export interface Props {
 const { 
   title = "About Me",
   content = "I'm a passionate professional with expertise in web development and design. With years of experience in the industry, I've helped numerous clients bring their digital visions to life through creative solutions and technical excellence.",
-  imageSrc = "https://via.placeholder.com/600x400?text=Jimmy+VUIDART",
+  imageSrc = "https://placehold.co/600x400?text=Jimmy+VUIDART",
   imageAlt = "Jimmy VUIDART"
 } = Astro.props;
 ---
@@ -29,7 +29,7 @@ const {
             src={imageSrc} 
             alt={imageAlt} 
             class="rounded-lg shadow-md w-full max-w-md mx-auto"
-            onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Profile+Image'"
+            onerror="this.onerror=null; this.src='https://placehold.co/600x400?text=Profile+Image'"
           />
         </div>
       </div>
