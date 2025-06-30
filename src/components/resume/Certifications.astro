@@ -1,0 +1,32 @@
+---
+export interface Certification {
+  title: string;
+  issuer: string;
+  date: string;
+}
+
+export interface Props {
+  certifications: Certification[];
+  title?: string;
+}
+
+const { 
+  certifications,
+  title = "Certifications" 
+} = Astro.props;
+---
+
+<section class="mb-12">
+  <h2 class="text-2xl font-bold text-indigo-600 mb-4">{title}</h2>
+  <div class="bg-white rounded-lg shadow-sm p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {certifications.map((cert) => (
+        <div class="border border-gray-200 rounded-lg p-4">
+          <h3 class="font-semibold text-gray-900">{cert.title}</h3>
+          <p class="text-indigo-500 text-sm">{cert.issuer}</p>
+          <p class="text-gray-500 text-sm mt-1">{cert.date}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

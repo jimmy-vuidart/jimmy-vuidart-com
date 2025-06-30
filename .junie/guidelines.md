@@ -17,3 +17,6 @@ You are an expert in TypeScript, Astro, Preact and scalable web application deve
 
 ## Business
 - App specification is available on .junie/specs.md
+
+## Misc
+- Commit to git once you finished all your operation

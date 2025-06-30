@@ -1,0 +1,18 @@
+---
+export interface Props {
+  summary: string;
+  title?: string;
+}
+
+const { 
+  summary,
+  title = "Professional Summary" 
+} = Astro.props;
+---
+
+<section class="mb-12">
+  <h2 class="text-2xl font-bold text-indigo-600 mb-4">{title}</h2>
+  <div class="bg-white rounded-lg shadow-sm p-6">
+    <p class="text-gray-700 leading-relaxed">{summary}</p>
+  </div>
+</section>
