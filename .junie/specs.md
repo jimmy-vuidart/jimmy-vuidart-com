@@ -5,6 +5,7 @@ This app is dedicated to host my resume, portfolio and a contact page
 ## Global
 
 - The app supports EN and FR
+- Make the project fancy, with a lot of animation and advanced effects
 
 ## Portfolio
 

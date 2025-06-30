@@ -4,6 +4,7 @@ export interface PortfolioItem {
   summary: string;
   image: string;
   link?: string;
+  github?: string;
   date: string;
   isShowcased?: boolean;
 }
