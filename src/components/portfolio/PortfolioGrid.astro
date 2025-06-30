@@ -1,0 +1,24 @@
+---
+import type { PortfolioItem } from '../../shared/portfolio.model';
+import PortfolioItemComponent from './PortfolioItem.astro';
+
+export interface Props {
+  items: PortfolioItem[];
+}
+
+const { items } = Astro.props;
+
+// Separate showcased items from regular items
+const showcasedItems = items.filter(item => item.isShowcased);
+const regularItems = items.filter(item => !item.isShowcased);
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  {showcasedItems.map(item => (
+    <PortfolioItemComponent item={item} />
+  ))}
+  
+  {regularItems.map(item => (
+    <PortfolioItemComponent item={item} />
+  ))}
+</div>

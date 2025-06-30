@@ -1,4 +1,4 @@
-// src/data/resumeData.ts
+// src/data/resume-data.ts
 // Centralized resume data for use across the application
 
 // Define types for resume data

@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PortfolioGrid from "../components/portfolio/PortfolioGrid.astro";
+import { portfolioData } from "../shared/data/portfolio-data";
+
+// Extract portfolio items from the data
+const { items } = portfolioData;
+---
+
+<Layout title="Jimmy Vuidart - Portfolio" description="Portfolio of projects by Jimmy Vuidart, Web Developer & Designer">
+  <div class="container mx-auto px-4 py-12">
+    <!-- Page Title -->
+    <div class="mb-12 text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">My Portfolio</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        A collection of my recent projects and work. Each project represents a unique challenge and solution.
+      </p>
+      <div class="w-20 h-1 bg-indigo-600 mx-auto mt-6"></div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <PortfolioGrid items={items} />
+  </div>
+</Layout>

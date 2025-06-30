@@ -1,7 +1,7 @@
 // src/pages/api/generate-resume-pdf.ts
 import type { APIRoute } from 'astro';
 import PDFDocument from 'pdfkit';
-import { resumeData } from '../../data/resumeData';
+import { resumeData } from '../../shared/data/resume-data.ts';
 
 export const GET: APIRoute = async () => {
   try {

@@ -1,0 +1,36 @@
+---
+import type { PortfolioItem } from '../../shared/portfolio.model';
+
+export interface Props {
+  item: PortfolioItem;
+}
+
+const { item } = Astro.props;
+---
+
+<div class={`bg-white rounded-lg shadow-md overflow-hidden ${item.isShowcased ? 'col-span-3' : 'col-span-1'}`}>
+  <div class="relative">
+    <img 
+      src={item.image} 
+      alt={item.title} 
+      class={`w-full object-cover ${item.isShowcased ? 'h-96' : 'h-64'}`}
+    />
+    <div class="absolute top-0 right-0 bg-indigo-600 text-white px-3 py-1 m-2 text-sm rounded">
+      {item.date}
+    </div>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2">{item.title}</h3>
+    <p class="text-gray-600 mb-4">{item.summary}</p>
+    {item.link && (
+      <a 
+        href={item.link} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors"
+      >
+        View Project
+      </a>
+    )}
+  </div>
+</div>

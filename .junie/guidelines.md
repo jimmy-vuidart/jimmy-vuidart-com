@@ -5,7 +5,7 @@ You are an expert in TypeScript, Astro, Preact and scalable web application deve
 - Prefer type inference when the type is obvious
 - Avoid the `any` type; use `unknown` when type is uncertain
 - Filenames must respect kebab-case
-- Except for props interface, all interfaces musts be stored standalone in a <NAME>.model.ts file in the src/shared folder. Consider using subdirectories if it makes sense.
+- Except for props interface, all interfaces musts be stored standalone in a <NAME>.model.ts file in the src/shared/models folder. Consider using subdirectories if it makes sense.
 
 ## Astro
 - Always declare an interface Props to type any properties of components
