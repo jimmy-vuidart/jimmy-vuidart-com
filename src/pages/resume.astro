@@ -13,29 +13,95 @@ const { professionalSummary, workExperience, education, skills, certifications }
 ---
 
 <Layout title="Jimmy Vuidart - Resume" description="Professional resume of Jimmy Vuidart, Web Developer & Designer">
-  <div class="container mx-auto px-4 py-12">
-    <!-- Page Title -->
-    <div class="mb-12 text-center">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Professional Resume</h1>
-      <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+  <!-- Hero Section -->
+  <div class="relative py-20 bg-gradient-to-br from-indigo-600 to-purple-700 overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-20"></div>
+
+    <!-- Animated Shapes -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+      <div class="absolute -bottom-24 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
     </div>
 
-    <!-- Professional Summary -->
-    <ProfessionalSummary summary={professionalSummary} />
-
-    <!-- Work Experience -->
-    <WorkExperience jobs={workExperience} />
-
-    <!-- Education -->
-    <Education educationList={education} />
-
-    <!-- Skills -->
-    <Skills skillGroups={skills} />
-
-    <!-- Certifications -->
-    <Certifications certifications={certifications} />
-
-    <!-- Download Resume -->
-    <DownloadButton />
+    <div class="container mx-auto px-4 relative z-10 text-center">
+      <h1 
+        class="text-4xl md:text-5xl lg:text-6xl font-['Montserrat',sans-serif] font-extrabold text-white mb-6"
+        data-aos="fade-up"
+      >
+        Professional Resume
+      </h1>
+      <p 
+        class="text-xl text-indigo-100 max-w-2xl mx-auto mb-8 leading-relaxed"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        My professional journey, skills, and qualifications
+      </p>
+      <div 
+        class="w-24 h-1.5 bg-gradient-to-r from-white to-indigo-300 mx-auto rounded-full"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      ></div>
+    </div>
   </div>
+
+  <div class="container mx-auto px-4 py-16">
+    <div class="bg-white rounded-2xl shadow-xl p-8 mb-16 -mt-16 relative z-20" data-aos="fade-up">
+      <!-- Download Resume Button - Top -->
+      <div class="flex justify-end mb-8">
+        <DownloadButton variant="secondary" />
+      </div>
+
+      <!-- Professional Summary -->
+      <div data-aos="fade-up">
+        <ProfessionalSummary summary={professionalSummary} />
+      </div>
+
+      <!-- Work Experience -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <WorkExperience jobs={workExperience} />
+      </div>
+
+      <!-- Education -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <Education educationList={education} />
+      </div>
+
+      <!-- Two Column Layout for Skills and Certifications -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <!-- Skills -->
+        <div data-aos="fade-up" data-aos-delay="300">
+          <Skills skillGroups={skills} />
+        </div>
+
+        <!-- Certifications -->
+        <div data-aos="fade-up" data-aos-delay="400">
+          <Certifications certifications={certifications} />
+        </div>
+      </div>
+
+      <!-- Download Resume Button - Bottom -->
+      <div class="flex justify-center mt-12" data-aos="fade-up" data-aos-delay="500">
+        <DownloadButton />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes blob {
+      0% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+
+    .animate-blob {
+      animation: blob 15s infinite;
+    }
+
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+  </style>
 </Layout>

@@ -13,12 +13,58 @@ const showcasedItems = items.filter(item => item.isShowcased);
 const regularItems = items.filter(item => !item.isShowcased);
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-  {showcasedItems.map(item => (
-    <PortfolioItemComponent item={item} />
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  {showcasedItems.map((item, index) => (
+    <div class="md:col-span-3 mb-12 transform transition-all duration-500 hover:scale-[1.01]" data-aos="fade-up" data-aos-delay={index * 100}>
+      <PortfolioItemComponent item={item} />
+    </div>
   ))}
-  
-  {regularItems.map(item => (
-    <PortfolioItemComponent item={item} />
-  ))}
+
+  <div class="col-span-full">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {regularItems.map((item, index) => (
+        <div class="transform transition-all duration-500 hover:scale-[1.03] hover:-rotate-1" data-aos="fade-up" data-aos-delay={index * 100}>
+          <PortfolioItemComponent item={item} />
+        </div>
+      ))}
+    </div>
+  </div>
 </div>
+
+<script>
+  // Initialize AOS (Animate On Scroll) library
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof window.AOS !== 'undefined') {
+      window.AOS.init({
+        duration: 800,
+        easing: 'ease-out',
+        once: false
+      });
+    }
+  });
+</script>
+
+<style>
+  /* Add staggered animation for items */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  [data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
