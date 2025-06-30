@@ -30,7 +30,7 @@ export interface Certification {
 
 // Resume data
 export const resumeData = {
-  name: "Jimmy Vuidart",
+  name: "Jimmy VUIDART",
   title: "Web Developer & Designer",
   professionalSummary: "Experienced web developer and designer with a passion for creating modern, responsive, and user-friendly digital experiences. Skilled in front-end and back-end technologies with a strong focus on delivering high-quality solutions that meet business objectives.",
   
@@ -111,7 +111,7 @@ export const resumeData = {
   ],
 
   contact: {
-    email: "contact@jimmyvuidart.com",
+    email: "contact@JimmyVUIDART.com",
     phone: "+1 (555) 123-4567",
     location: "San Francisco, CA"
   }

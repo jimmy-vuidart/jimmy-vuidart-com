@@ -11,7 +11,7 @@ export const portfolioData: PortfolioData = {
       summary: 'A full-featured e-commerce platform built with React, Node.js, and MongoDB. Includes product management, shopping cart, user authentication, and payment processing.',
       image: 'https://placehold.co/800x600?text=E-Commerce+Platform',
       link: 'https://example.com/ecommerce',
-      github: 'https://github.com/jimmyvuidart/ecommerce-platform',
+      github: 'https://github.com/JimmyVUIDART/ecommerce-platform',
       date: '2023',
       isShowcased: true
     },
@@ -29,7 +29,7 @@ export const portfolioData: PortfolioData = {
       summary: 'A responsive portfolio website built with Astro and Tailwind CSS. Features smooth animations and optimized performance.',
       image: 'https://placehold.co/800x600?text=Portfolio+Website',
       link: 'https://example.com/portfolio',
-      github: 'https://github.com/jimmyvuidart/portfolio-website',
+      github: 'https://github.com/JimmyVUIDART/portfolio-website',
       date: '2022'
     },
     {
@@ -61,7 +61,7 @@ export const portfolioData: PortfolioData = {
       summary: 'A social networking platform with profiles, posts, and messaging. Built with MERN stack (MongoDB, Express, React, Node.js).',
       image: 'https://placehold.co/800x600?text=Social+Network+App',
       link: 'https://example.com/social',
-      github: 'https://github.com/jimmyvuidart/social-network',
+      github: 'https://github.com/JimmyVUIDART/social-network',
       date: '2020',
       isShowcased: true
     }

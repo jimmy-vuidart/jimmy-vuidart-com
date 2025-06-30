@@ -256,7 +256,7 @@ export const GET: APIRoute = async () => {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': 'inline; filename="jimmy-vuidart-resume.pdf"'
+        'Content-Disposition': 'inline; filename="Jimmy-VUIDART-resume.pdf"'
       }
     });
   } catch (error) {
