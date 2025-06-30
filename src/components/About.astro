@@ -1,0 +1,38 @@
+---
+export interface Props {
+  title?: string;
+  content?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+}
+
+const { 
+  title = "About Me",
+  content = "I'm a passionate professional with expertise in web development and design. With years of experience in the industry, I've helped numerous clients bring their digital visions to life through creative solutions and technical excellence.",
+  imageSrc = "https://via.placeholder.com/600x400?text=Jimmy+Vuidart",
+  imageAlt = "Jimmy Vuidart"
+} = Astro.props;
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-6">{title}</h2>
+        <div class="text-gray-600 space-y-4">
+          <p>{content}</p>
+        </div>
+      </div>
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <div class="relative">
+          <img 
+            src={imageSrc} 
+            alt={imageAlt} 
+            class="rounded-lg shadow-md w-full max-w-md mx-auto"
+            onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Profile+Image'"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

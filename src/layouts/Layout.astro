@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Professional page of Jimmy Vuidart" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-indigo-600">Jimmy Vuidart</a>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="/" class="hover:text-indigo-600 transition-colors">Home</a></li>
+            <li><a href="/resume" class="hover:text-indigo-600 transition-colors">Resume</a></li>
+            <li><a href="/portfolio" class="hover:text-indigo-600 transition-colors">Portfolio</a></li>
+            <li><a href="/contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main class="flex-grow">
+      <slot />
+    </main>
+    
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <p>&copy; {new Date().getFullYear()} Jimmy Vuidart. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-300 transition-colors">
+              GitHub
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-300 transition-colors">
+              LinkedIn
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-300 transition-colors">
+              Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

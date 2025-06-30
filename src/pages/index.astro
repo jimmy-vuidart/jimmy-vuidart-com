@@ -1,16 +1,47 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Features from "../components/Features.astro";
+import CallToAction from "../components/CallToAction.astro";
 
+const features = [
+  {
+    title: "Web Development",
+    description: "Creating responsive, modern websites and web applications using the latest technologies and best practices.",
+    icon: "💻"
+  },
+  {
+    title: "UI/UX Design",
+    description: "Designing intuitive and engaging user interfaces that provide exceptional user experiences.",
+    icon: "🎨"
+  },
+  {
+    title: "Technical Consulting",
+    description: "Providing expert advice on technology choices, architecture, and implementation strategies.",
+    icon: "📊"
+  }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Jimmy Vuidart - Professional Portfolio">
+  <Hero 
+    title="Jimmy Vuidart"
+    subtitle="Web Developer & Designer creating modern digital experiences"
+  />
+
+  <About 
+    content="I'm a passionate web developer and designer with expertise in creating modern, responsive, and user-friendly websites and applications. With a strong foundation in both front-end and back-end technologies, I deliver comprehensive solutions that meet business objectives while providing exceptional user experiences."
+  />
+
+  <Features 
+    features={features}
+    title="My Expertise"
+    subtitle="Specialized skills and services I offer to help bring your digital vision to life"
+  />
+
+  <CallToAction 
+    title="Ready to Start Your Project?"
+    description="Let's collaborate to create something amazing together. Whether you need a new website, application, or digital strategy, I'm here to help."
+  />
+</Layout>

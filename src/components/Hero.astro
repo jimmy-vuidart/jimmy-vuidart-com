@@ -1,0 +1,28 @@
+---
+export interface Props {
+  title: string;
+  subtitle: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const { 
+  title, 
+  subtitle, 
+  ctaText = "View Portfolio", 
+  ctaLink = "/portfolio" 
+} = Astro.props;
+---
+
+<section class="py-20 bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{title}</h1>
+    <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 opacity-90">{subtitle}</p>
+    <a 
+      href={ctaLink} 
+      class="inline-block bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg transition-all duration-200"
+    >
+      {ctaText}
+    </a>
+  </div>
+</section>
