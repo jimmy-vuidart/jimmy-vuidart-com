@@ -12,3 +12,8 @@ This app is dedicated to host my resume, portfolio and a contact page
 - Each element is made of an image, a title, a summary, an optional link and a date
 - List elements on 3 columns and mulitple rows
 - Showcased project will take all 3 columns and the whole row
+
+## Contact page
+
+- Top section will recall all my social media and my email for contact
+- Bottom section contains a simple contact form
