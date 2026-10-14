@@ -2,6 +2,10 @@
 
 [jimmy.vuidart.com](https://jimmy.vuidart.com)
 
+## 📖 Documentation & Fonctionnalités
+
+Pour une vue détaillée des fonctionnalités et de l'architecture du projet, consultez la [documentation des fonctionnalités](docs/fonctionnalites.md) ainsi que le Wiki du projet.
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
